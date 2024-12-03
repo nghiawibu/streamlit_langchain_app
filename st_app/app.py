@@ -3,19 +3,13 @@ from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_openai import AzureChatOpenAI
 from dotenv import load_dotenv
-from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 import os
 from langchain_google_community import GoogleSearchAPIWrapper
 from langchain_core.tools import Tool
-from langgraph.prebuilt import create_react_agent
 from langchain.agents import AgentExecutor, create_openai_functions_agent
-from langchain_community.tools.asknews import AskNewsSearch
-from langchain_community.utilities.alpha_vantage import AlphaVantageAPIWrapper
 from langchain_community.tools import YouTubeSearchTool
 from langchain_core.tools import StructuredTool
-from langchain_community.utilities.wolfram_alpha import WolframAlphaAPIWrapper
-from langchain_openai import AzureOpenAIEmbeddings
 import requests
 
 load_dotenv()
